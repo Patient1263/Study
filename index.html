@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="链学——系统、轻松地学习供应链知识。" />
+  <title>链学 · 供应链知识学习平台</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="链学首页">
+        <span class="brand-mark"><i></i><i></i><i></i></span>
+        <span>链学</span>
+      </a>
+
+      <nav class="nav" aria-label="主导航">
+        <p class="nav-label">学习空间</p>
+        <a class="nav-item active" href="#home" data-page="home"><span class="icon">⌂</span>学习首页</a>
+        <a class="nav-item" href="#paths" data-page="paths"><span class="icon">▱</span>学习路径</a>
+        <a class="nav-item" href="#knowledge" data-page="knowledge"><span class="icon">◇</span>知识库</a>
+        <a class="nav-item" href="#cases" data-page="cases"><span class="icon">▤</span>行业案例</a>
+        <a class="nav-item" href="#tools" data-page="tools"><span class="icon">⌁</span>实用工具</a>
+        <p class="nav-label nav-label-second">我的</p>
+        <a class="nav-item" href="#progress" data-page="progress"><span class="icon">◷</span>学习进度</a>
+        <a class="nav-item" href="#favorites" data-page="favorites"><span class="icon">☆</span>我的收藏</a>
+      </nav>
+
+      <div class="sidebar-card">
+        <span class="bulb">✦</span>
+        <strong>每日一问</strong>
+        <p>牛鞭效应为什么会放大需求波动？</p>
+        <button id="dailyAnswer">查看答案 <span>→</span></button>
+      </div>
+      <div class="sidebar-user">
+        <div class="avatar">林</div>
+        <div><strong>林晓然</strong><span>供应链学习者</span></div>
+        <button aria-label="打开设置">•••</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="打开菜单">☰</button>
+        <div class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="搜索课程、概念或案例…" /><kbd>⌘ K</kbd></div>
+        <div class="top-actions">
+          <button class="streak"><span>🔥</span><strong>12</strong> 天连续学习</button>
+          <button class="bell" aria-label="通知">♢<i></i></button>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="welcome-row">
+          <div><p class="eyebrow">2026 年 7 月 28 日 · 星期二</p><h1>下午好，晓然 👋</h1><p>保持好奇，今天也来探索供应链的奥秘吧。</p></div>
+          <div class="week-goal"><div><span>本周目标</span><strong><b id="weekCount">3</b> / 5 节</strong></div><div class="mini-progress"><i></i></div></div>
+        </div>
+
+        <section class="hero-card">
+          <div class="hero-copy">
+            <span class="tag">继续学习</span>
+            <p class="course-kicker">核心基础 · 第 3 章</p>
+            <h2>库存管理与安全库存</h2>
+            <p>掌握库存的核心逻辑，学会在服务水平与持有成本之间找到最佳平衡。</p>
+            <div class="hero-meta"><span>◷&nbsp; 约 18 分钟</span><span>▤&nbsp; 8 个知识点</span></div>
+            <button class="primary-btn" id="continueBtn"><span>▶</span>继续学习</button>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="grid-lines"></div>
+            <div class="warehouse"><div class="roof"></div><div class="building"><i></i><i></i><i></i><i></i></div></div>
+            <div class="box box-a">↥</div><div class="box box-b">↥</div><div class="box box-c">↥</div>
+            <div class="forklift">▰<span>◉ ◉</span></div>
+            <div class="hero-progress"><strong>68%</strong><span>课程进度</span><div><i></i></div></div>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <div class="section-heading"><div><h2>探索学习路径</h2><p>从基础到进阶，构建完整的供应链知识体系</p></div><a href="#paths" class="view-all">查看全部 <span>→</span></a></div>
+          <div class="path-grid" id="pathGrid">
+            <article class="path-card" data-search="供应链基础 入门 采购 物流 库存">
+              <div class="card-icon mint">⌘</div><span class="level beginner">入门</span>
+              <h3>供应链基础</h3><p>建立全局视角，理解从供应商到客户的完整价值链。</p>
+              <div class="card-stats"><span>▤ 12 节课程</span><span>◷ 3.5 小时</span></div>
+              <div class="progress-row"><div><i style="width:75%"></i></div><b>75%</b></div>
+            </article>
+            <article class="path-card" data-search="计划与需求预测 进阶 S&OP 预测">
+              <div class="card-icon blue">⌁</div><span class="level intermediate">进阶</span>
+              <h3>计划与需求预测</h3><p>用数据洞察需求，让预测与计划驱动高效协同。</p>
+              <div class="card-stats"><span>▤ 10 节课程</span><span>◷ 4 小时</span></div>
+              <div class="progress-row"><div><i style="width:30%"></i></div><b>30%</b></div>
+            </article>
+            <article class="path-card" data-search="采购与供应商管理 入门 寻源 谈判">
+              <div class="card-icon amber">◎</div><span class="level beginner">入门</span>
+              <h3>采购与供应商管理</h3><p>从战略寻源到供应商关系，提升采购的长期价值。</p>
+              <div class="card-stats"><span>▤ 9 节课程</span><span>◷ 3 小时</span></div>
+              <div class="progress-row not-started"><div><i></i></div><b>未开始</b></div>
+            </article>
+          </div>
+          <p class="no-results" id="noResults">没有找到匹配的学习内容，换个关键词试试吧。</p>
+        </section>
+
+        <section class="bottom-grid">
+          <div class="section-block knowledge-block">
+            <div class="section-heading"><div><h2>今日知识卡片</h2><p>每天 3 分钟，积累一个关键概念</p></div><button class="refresh" id="refreshCard">↻ 换一张</button></div>
+            <article class="knowledge-card" id="knowledgeCard">
+              <div class="concept-art"><span>↗</span><i></i><b>↘</b></div>
+              <div class="concept-copy"><span class="tiny-tag">核心概念</span><h3>牛鞭效应</h3><p>供应链中，需求信息从下游向上游传递时，波动被逐级放大的现象。</p><button class="text-btn" id="learnConcept">了解更多 →</button></div>
+            </article>
+          </div>
+          <aside class="rank-card">
+            <div class="section-heading"><div><h2>本周学习榜</h2><p>和伙伴们一起进步</p></div><span class="rank-icon">♜</span></div>
+            <div class="rank-list">
+              <div><b class="medal gold">1</b><span class="avatar avatar-1">陈</span><p><strong>陈思远</strong><small>学习 186 分钟</small></p><em>+12</em></div>
+              <div><b class="medal silver">2</b><span class="avatar avatar-2">周</span><p><strong>周楚涵</strong><small>学习 154 分钟</small></p><em>+8</em></div>
+              <div class="me"><b class="medal">5</b><span class="avatar">林</span><p><strong>林晓然 <i>我</i></strong><small>学习 98 分钟</small></p><em>+3</em></div>
+            </div>
+          </aside>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="modal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true"><button class="modal-close" id="modalClose">×</button><span class="modal-icon">〽</span><p class="eyebrow">知识解析</p><h2 id="modalTitle">为什么会产生牛鞭效应？</h2><p id="modalText">需求预测更新、批量订购、价格波动与短缺博弈，会让微小的终端需求变化沿供应链逐级放大。共享真实需求数据、缩短交付周期，是缓解它的关键。</p><button class="primary-btn" id="modalOkay">知道了</button></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
