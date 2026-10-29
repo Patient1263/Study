@@ -37,11 +37,6 @@ document.addEventListener('keydown', (event) => { if (event.key === 'Escape') cl
 $('#continueBtn').addEventListener('click', (event) => {
   const button = event.currentTarget;
   button.innerHTML = '<span>✓</span>已进入课程';
-  const current = Number(localStorage.getItem('supplyChainWeek') || 3);
-  const next = Math.min(5, current + 1);
-  localStorage.setItem('supplyChainWeek', next);
-  $('#weekCount').textContent = next;
-  $('.mini-progress i').style.width = `${next * 20}%`;
   toast('课程已为你准备好，继续保持！');
 });
 
@@ -71,7 +66,7 @@ const filterCards = () => {
   let visible = 0;
   $$('.path-card').forEach((card) => {
     const match = card.dataset.search.toLowerCase().includes(query);
-    card.style.display = match ? '' : 'none';
+    card.style.display = match ? (query ? 'block' : '') : 'none';
     if (match) visible += 1;
   });
   $('#noResults').style.display = visible ? 'none' : 'block';
